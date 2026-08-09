@@ -4,9 +4,11 @@ services:
     env: node
     plan: free
     buildCommand: npm install && npm run build
-    startCommand: node .output/server/index.mjs
+    startCommand: npm start
     envVars:
       - key: NODE_ENV
         value: production
       - key: NITRO_PRESET
         value: node-server
+      - key: HOST
+        value: 0.0.0.0
