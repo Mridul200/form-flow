@@ -87,7 +87,7 @@ function Landing() {
     <div className="min-h-screen bg-[#070a0f] text-slate-100 font-sans selection:bg-[#a3e635] selection:text-black">
       {/* Top Navbar */}
       <header className="sticky top-0 z-50 border-b border-slate-800/80 bg-[#070a0f]/90 backdrop-blur-md">
-        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
+        <div className="mx-auto flex min-h-16 max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-8">
           <Link to="/" className="flex items-center gap-2.5">
             <span className="grid size-9 place-items-center rounded-xl bg-[#a3e635] text-black shadow-lg shadow-[#a3e635]/20">
               <Activity className="size-5" strokeWidth={2.8} />
@@ -112,15 +112,15 @@ function Landing() {
             </a>
           </nav>
 
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center justify-end gap-2 sm:gap-3">
             <LanguageToggle />
-            <Button asChild variant="ghost" size="sm" className="text-xs text-slate-300 hover:text-white hover:bg-slate-800">
+            <Button asChild variant="ghost" size="sm" className="h-10 text-xs text-slate-300 hover:text-white hover:bg-slate-800">
               <Link to="/auth">{isHi ? "साइन इन" : "Sign in"}</Link>
             </Button>
             <Button
               asChild
               size="sm"
-              className="bg-[#a3e635] text-black font-semibold hover:bg-[#b5f847] shadow-lg shadow-[#a3e635]/20 text-xs px-4"
+              className="h-10 bg-[#a3e635] text-black font-semibold hover:bg-[#b5f847] shadow-lg shadow-[#a3e635]/20 text-xs px-4"
             >
               <Link to="/auth">{isHi ? "शुरू करें" : "Get started"}</Link>
             </Button>
@@ -130,7 +130,7 @@ function Landing() {
 
       <main>
         {/* Dark High-Tech Hero Section */}
-        <section className="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-32 border-b border-slate-800/50">
+        <section className="relative overflow-hidden pt-10 pb-16 sm:pt-14 sm:pb-20 lg:pt-20 lg:pb-32 border-b border-slate-800/50">
           {/* Neon Glow background elements */}
           <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-[#a3e635]/10 rounded-full blur-[140px] pointer-events-none" />
           <div className="absolute top-10 right-10 w-[300px] h-[300px] bg-emerald-500/10 rounded-full blur-[120px] pointer-events-none" />
@@ -144,7 +144,7 @@ function Landing() {
                   {isHi ? "AI द्वारा संचालित फिजियोथेरेपी" : "AI POWERED PHYSIOTHERAPY"}
                 </div>
 
-                <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl font-display leading-[1.08]">
+                <h1 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-6xl font-display leading-[1.08]">
                   {isHi ? (
                     <>
                       आपका फिजियो नहीं देख रहा है।{" "}
@@ -165,7 +165,7 @@ function Landing() {
                 </p>
 
                 {/* Hero CTAs */}
-                <div className="flex flex-wrap gap-4 pt-2">
+                <div className="flex flex-col gap-3 pt-2 sm:flex-row sm:flex-wrap">
                   <Button
                     asChild
                     size="lg"
@@ -188,7 +188,7 @@ function Landing() {
                 </div>
 
                 {/* Hero Metrics Badge Row */}
-                <div className="pt-6 border-t border-slate-800/80 grid grid-cols-3 gap-4 text-xs">
+                <div className="pt-6 border-t border-slate-800/80 grid grid-cols-1 gap-3 text-xs sm:grid-cols-3">
                   <div className="flex items-center gap-2">
                     <span className="grid size-8 place-items-center rounded-lg bg-slate-800/90 text-[#a3e635]">
                       <ScanLine className="size-4" />
@@ -233,7 +233,7 @@ function Landing() {
                   />
 
                   {/* AI Floating Card Overlay */}
-                  <div className="absolute bottom-6 right-6 left-6 rounded-xl border border-[#a3e635]/40 bg-[#070a0f]/90 p-4 backdrop-blur-md shadow-2xl flex items-center justify-between gap-4">
+                  <div className="absolute bottom-4 left-4 right-4 rounded-xl border border-[#a3e635]/40 bg-[#070a0f]/90 p-3 backdrop-blur-md shadow-2xl flex flex-col gap-3 sm:bottom-6 sm:left-6 sm:right-6 sm:flex-row sm:items-center sm:justify-between sm:p-4">
                     <div className="flex items-center gap-3">
                       <span className="relative flex size-3">
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#a3e635] opacity-75" />
@@ -248,7 +248,7 @@ function Landing() {
                         </p>
                       </div>
                     </div>
-                    <div className="text-right border-l border-slate-800 pl-4">
+                    <div className="text-left border-t border-slate-800 pt-3 sm:text-right sm:border-l sm:border-t-0 sm:pl-4 sm:pt-0">
                       <p className="text-xs font-semibold text-white">Rep 7</p>
                       <p className="text-[11px] text-[#a3e635]">92% {isHi ? "सटीकता" : "accuracy"}</p>
                     </div>

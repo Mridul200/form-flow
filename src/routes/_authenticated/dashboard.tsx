@@ -283,7 +283,7 @@ function Dashboard() {
       {/* Main Page Area */}
       <div className="flex-1 flex flex-col min-w-0">
         {/* Top Bar */}
-        <header className="sticky top-0 z-30 flex h-16 items-center justify-between gap-4 border-b border-slate-200 bg-white/90 px-6 backdrop-blur-md">
+        <header className="sticky top-0 z-30 flex h-16 items-center justify-between gap-4 border-b border-slate-200 bg-white/90 px-4 sm:px-6 backdrop-blur-md">
           <div className="flex items-center gap-3">
             <Link to="/" className="lg:hidden flex items-center gap-2">
               <span className="grid size-8 place-items-center rounded-xl bg-emerald-600 text-white">
@@ -319,7 +319,7 @@ function Dashboard() {
         </header>
 
         {/* Dashboard Main Content */}
-        <main className="flex-1 p-6 sm:p-8 space-y-8 max-w-7xl mx-auto w-full">
+        <main className="flex-1 p-4 pb-24 sm:p-6 sm:pb-24 lg:p-8 lg:pb-8 space-y-6 sm:space-y-8 max-w-7xl mx-auto w-full">
           {/* Small Profile Completion Reminder if not completed */}
           {!isCompleted && (
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4 rounded-2xl bg-amber-500/10 border border-amber-500/30 p-4">
@@ -348,7 +348,7 @@ function Dashboard() {
             </div>
           )}
           {/* Header Title + Search Bar */}
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <div>
               <h1 className="text-3xl font-extrabold text-slate-900 tracking-tight font-display">
                 {isHi ? "आज का व्यायाम चुनें" : "Choose today’s exercise"}
@@ -373,7 +373,7 @@ function Dashboard() {
           </div>
 
           {/* Category Filter Pills */}
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-nowrap gap-2 overflow-x-auto pb-1">
             {categories.map((cat) => (
               <button
                 key={cat.id}
@@ -390,7 +390,7 @@ function Dashboard() {
           </div>
 
           {/* 10 Exercise Grid (Matches Image 1 layout) */}
-          <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
             {filtered.map((exConfig, idx) => {
               const name = getExerciseName(exConfig, language);
               const targetJoint = getExerciseTargetJoint(exConfig, language);
@@ -503,6 +503,26 @@ function Dashboard() {
           </div>
         </main>
       </div>
+
+      <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-slate-200 bg-white/95 backdrop-blur lg:hidden">
+        <div className="mx-auto flex max-w-6xl items-center justify-around gap-1 px-2 py-2">
+          {[
+            { to: "/dashboard", label: isHi ? "होम" : "Home", icon: Home },
+            { to: "/exercises", label: isHi ? "व्यायाम" : "Exercises", icon: Compass },
+            { to: "/progress", label: isHi ? "प्रगति" : "Progress", icon: Clock },
+            { to: "/profile", label: isHi ? "प्रोफाइल" : "Profile", icon: User },
+          ].map(({ to, label, icon: Icon }) => (
+            <Link
+              key={to}
+              to={to}
+              className="flex min-w-0 flex-1 flex-col items-center justify-center rounded-xl px-2 py-2 text-[11px] font-semibold text-slate-600 transition-colors"
+            >
+              <Icon className="size-4" />
+              <span className="mt-1 leading-none">{label}</span>
+            </Link>
+          ))}
+        </div>
+      </nav>
 
       {/* Centered First-Time / Edit Profile Setup Modal */}
       <ProfileSetupModal

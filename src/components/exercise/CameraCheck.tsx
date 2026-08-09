@@ -97,12 +97,12 @@ export function CameraCheck({
   }
 
   return (
-    <div className="surface-card overflow-hidden p-6 max-w-2xl mx-auto space-y-6">
+    <div className="surface-card overflow-hidden p-4 sm:p-6 max-w-2xl mx-auto space-y-4 sm:space-y-6">
       <div className="text-center space-y-1.5">
-        <h2 className="text-xl font-bold tracking-tight text-foreground">
+        <h2 className="text-lg font-bold tracking-tight text-foreground sm:text-xl">
           {isHi ? "कैमरा ठीक से रखें" : "Get your camera ready"}
         </h2>
-        <p className="text-sm text-muted-foreground max-w-md mx-auto">
+        <p className="text-sm leading-relaxed text-muted-foreground max-w-md mx-auto">
           {cameraNote} {isHi ? "जब सब ठीक हो जाए, तो अभ्यास अपने आप शुरू हो जाएगा।" : "When everything looks right, the exercise will start automatically."}
         </p>
       </div>

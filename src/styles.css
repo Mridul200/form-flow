@@ -142,11 +142,36 @@
     border-color: var(--color-border);
   }
 
+  html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
+    min-height: 100dvh;
+    overflow-x: hidden;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  img,
+  video,
+  canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    min-height: 44px;
   }
 
   h1,
@@ -155,6 +180,12 @@
   h4 {
     font-family: var(--font-display);
     letter-spacing: -0.02em;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 15px;
   }
 }
 

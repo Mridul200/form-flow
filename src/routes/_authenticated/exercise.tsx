@@ -138,7 +138,7 @@ function ExerciseSession() {
     <div className="flex min-h-screen flex-col bg-background">
       <AppHeader subtitle={name} />
 
-      <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-8">
+      <main className="mx-auto w-full max-w-6xl flex-1 px-3 py-4 sm:px-4 sm:py-6 lg:px-6 lg:py-8">
         {/* Phase 1: Camera Positioning Check */}
         {!sessionStarted ? (
           <div className="space-y-6">
@@ -158,7 +158,7 @@ function ExerciseSession() {
           </div>
         ) : (
           /* Phase 2: Live Exercise Session UI */
-          <div className="grid gap-6 lg:grid-cols-[1.5fr_1fr]">
+          <div className="grid gap-4 lg:grid-cols-[minmax(0,1.3fr)_minmax(280px,0.8fr)] lg:gap-6">
             {/* LEFT: Camera Feed + Feedback Banner + Disclaimer */}
             <div className="space-y-4">
               <div className="surface-card overflow-hidden relative shadow-lg">
