@@ -151,16 +151,6 @@ function Dashboard() {
     <div className="flex min-h-screen bg-[#f8fafc] text-slate-900 font-sans">
       {/* Sidebar Navigation */}
       <aside className="hidden lg:flex w-64 flex-col border-r border-slate-200 bg-white p-5 space-y-6 shrink-0 shadow-xs">
-        {/* Brand Logo */}
-        <Link to="/dashboard" className="flex items-center gap-2.5 px-2">
-          <span className="grid size-9 place-items-center rounded-xl bg-emerald-600 text-white shadow-sm">
-            <Activity className="size-5" strokeWidth={2.5} />
-          </span>
-          <span className="text-xl font-bold tracking-tight text-slate-900 font-display">
-            Rehab<span className="text-emerald-600">AI</span>
-          </span>
-        </Link>
-
         {/* Sidebar Nav Links */}
         <nav className="space-y-1 flex-1 text-xs font-semibold">
           <Link
