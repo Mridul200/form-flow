@@ -1,10 +1,9 @@
-<!-- LOVABLE:BEGIN -->
+<!-- PROJECT:BEGIN -->
 > [!IMPORTANT]
-> This project is connected to [Lovable](https://lovable.dev). Avoid rewriting
-> published git history — force pushing, or rebasing/amending/squashing commits
-> that are already pushed — as it rewrites history on Lovable's side and the
-> user will likely lose their project history.
+> This project is connected to a hosted deployment workflow. Avoid rewriting
+> published git history — force pushing, rebasing, or squashing commits that
+> are already pushed can cause the deployment history to be lost for the team.
 >
-> Commits you push to the connected branch sync back to Lovable and show up in
-> the editor, so keep the branch in a working state.
-<!-- LOVABLE:END -->
+> Keep the connected branch in a working state so deployment checks remain
+> reliable.
+<!-- PROJECT:END -->

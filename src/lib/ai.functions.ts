@@ -2,6 +2,8 @@ import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 
 const MODEL = "google/gemini-3.5-flash";
+const API_KEY_ENV = "AI_API_KEY";
+const LEGACY_API_KEY_ENV = "LOVABLE_API_KEY";
 
 const FeedbackInput = z.object({
   exercise: z.string(),
@@ -19,17 +21,21 @@ const SummaryInput = z.object({
   corrections: z.array(z.string()).max(5),
 });
 
+function getApiKey() {
+  return process.env[API_KEY_ENV] ?? process.env[LEGACY_API_KEY_ENV];
+}
+
 /** Short, encouraging, specific coaching sentence for the live feedback banner. */
 export const generateFeedbackText = createServerFn({ method: "POST" })
   .inputValidator((input: unknown) => FeedbackInput.parse(input))
   .handler(async ({ data }) => {
-    const key = process.env["LOVABLE_API_KEY"];
+    const key = getApiKey();
     if (!key) return { text: fallbackFeedback(data.formStatus, data.issues) };
 
     try {
       const { generateText } = await import("ai");
-      const { createLovableAiGatewayProvider } = await import("./ai-gateway.server");
-      const gateway = createLovableAiGatewayProvider(key);
+      const { createAiGatewayProvider } = await import("./ai-gateway.server");
+      const gateway = createAiGatewayProvider(key);
       const result = await generateText({
         model: gateway(MODEL),
         system:
@@ -47,13 +53,13 @@ export const generateFeedbackText = createServerFn({ method: "POST" })
 export const generateSessionSummary = createServerFn({ method: "POST" })
   .inputValidator((input: unknown) => SummaryInput.parse(input))
   .handler(async ({ data }) => {
-    const key = process.env["LOVABLE_API_KEY"];
+    const key = getApiKey();
     if (!key) return { text: fallbackSummary(data) };
 
     try {
       const { generateText } = await import("ai");
-      const { createLovableAiGatewayProvider } = await import("./ai-gateway.server");
-      const gateway = createLovableAiGatewayProvider(key);
+      const { createAiGatewayProvider } = await import("./ai-gateway.server");
+      const gateway = createAiGatewayProvider(key);
       const result = await generateText({
         model: gateway(MODEL),
         system:
