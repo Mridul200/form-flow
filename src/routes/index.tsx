@@ -12,6 +12,7 @@ import {
   Zap,
   Lock,
   CheckCircle2,
+  Video,
 } from "lucide-react";
 import heroImage from "@/assets/hero-rehab.jpg";
 import { Button } from "@/components/ui/button";
