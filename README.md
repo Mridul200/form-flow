@@ -1,4 +1,4 @@
-# 🏋️‍♂️ Form Flow (RehabAI)
+# 🏋️‍♂️ Form Flow (Rehavila)
 
 > **AI-Powered Physical Therapy & Rehabilitation Form Checker**  
 > Real-time pose analysis, joint angle tracking, voice coaching, and telehealth connectivity built for patients and physical therapists.
@@ -116,7 +116,7 @@ form-flow/
 
 ## ⚕️ Medical Disclaimer
 
-> **Disclaimer**: Form Flow (RehabAI) is an AI-assisted motion tracking tool designed for educational and fitness assistance. It is **not a substitute for professional medical advice, diagnosis, or treatment**. Always seek the advice of your physician or qualified physical therapist with any questions regarding a medical condition.
+> **Disclaimer**: Form Flow (Rehavila) is an AI-assisted motion tracking tool designed for educational and fitness assistance. It is **not a substitute for professional medical advice, diagnosis, or treatment**. Always seek the advice of your physician or qualified physical therapist with any questions regarding a medical condition.
 
 ---
 

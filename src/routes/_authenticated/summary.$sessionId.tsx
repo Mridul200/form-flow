@@ -13,12 +13,12 @@ import { toast } from "sonner";
 export const Route = createFileRoute("/_authenticated/summary/$sessionId")({
   head: () => ({
     meta: [
-      { title: "Session Summary — RehabAI" },
+      { title: "Session Summary — Rehavila" },
       {
         name: "description",
         content: "Accuracy score, valid and invalid reps, patient information, and AI coaching notes for your session.",
       },
-      { property: "og:title", content: "Session Summary — RehabAI" },
+      { property: "og:title", content: "Session Summary — Rehavila" },
       { property: "og:description", content: "Your rehab session results and key corrections." },
     ],
   }),
@@ -91,7 +91,7 @@ function SummaryPage() {
 
       // Header
       doc.setFontSize(18);
-      doc.text("RehabAI — Patient Session Report", 20, y);
+      doc.text("Rehavila — Patient Session Report", 20, y);
       y += 6;
       doc.setLineWidth(0.5);
       doc.line(20, y, 190, y);
@@ -142,7 +142,7 @@ function SummaryPage() {
       y += 12;
       doc.setFontSize(8);
       for (const line of doc.splitTextToSize(
-        "Disclaimer: RehabAI provides movement feedback for general fitness and rehab support. It is not a substitute for professional medical advice, diagnosis or treatment.",
+        "Disclaimer: Rehavila provides movement feedback for general fitness and rehab support. It is not a substitute for professional medical advice, diagnosis or treatment.",
         170,
       )) {
         doc.text(line, 20, (y += 4));

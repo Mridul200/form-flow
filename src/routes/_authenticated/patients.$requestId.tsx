@@ -10,12 +10,12 @@ import { formatDateTime } from "@/lib/stats";
 export const Route = createFileRoute("/_authenticated/patients/$requestId")({
   head: () => ({
     meta: [
-      { title: "Patient detail — RehabAI" },
+      { title: "Patient detail — Rehavila" },
       {
         name: "description",
         content: "Full session history, trends, chat and video call for an approved patient.",
       },
-      { property: "og:title", content: "Patient detail — RehabAI" },
+      { property: "og:title", content: "Patient detail — Rehavila" },
       { property: "og:description", content: "Review a patient's rehab sessions." },
     ],
   }),

@@ -12,13 +12,13 @@ import { formatDateTime } from "@/lib/stats";
 export const Route = createFileRoute("/_authenticated/admin")({
   head: () => ({
     meta: [
-      { title: "Admin panel — RehabAI" },
+      { title: "Admin panel — Rehavila" },
       {
         name: "description",
         content: "Platform stats, doctor verification, user management and chat moderation.",
       },
-      { property: "og:title", content: "Admin panel — RehabAI" },
-      { property: "og:description", content: "Operate the RehabAI platform." },
+      { property: "og:title", content: "Admin panel — Rehavila" },
+      { property: "og:description", content: "Operate the Rehavila platform." },
     ],
   }),
   component: AdminPanel,

@@ -10,7 +10,7 @@ export function BrandMark({ className = "" }: { className?: string }) {
       <span className="grid size-8 place-items-center rounded-xl bg-primary text-primary-foreground">
         <Activity className="size-4" strokeWidth={2.5} />
       </span>
-      <span className="text-lg font-semibold tracking-tight">RehabAI</span>
+      <span className="text-lg font-semibold tracking-tight">Rehavila</span>
     </span>
   );
 }

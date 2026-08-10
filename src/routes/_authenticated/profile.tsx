@@ -22,7 +22,7 @@ import { Button } from "@/components/ui/button";
 export const Route = createFileRoute("/_authenticated/profile")({
   head: () => ({
     meta: [
-      { title: "Patient Profile — RehabAI" },
+      { title: "Patient Profile — Rehavila" },
       {
         name: "description",
         content: "View and edit your personal patient profile for session reports.",

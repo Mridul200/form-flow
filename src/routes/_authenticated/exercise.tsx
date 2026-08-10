@@ -33,7 +33,7 @@ export const Route = createFileRoute("/_authenticated/exercise")({
   validateSearch: searchSchema,
   head: () => ({
     meta: [
-      { title: "Live Exercise Session — RehabAI" },
+      { title: "Live Exercise Session — Rehavila" },
       {
         name: "description",
         content: "Real-time AI posture & form analysis with live joint angle calculation.",

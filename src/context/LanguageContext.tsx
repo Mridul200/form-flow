@@ -80,7 +80,7 @@ export interface Translations {
 
 const TRANSLATIONS: Record<Language, Translations> = {
   en: {
-    appName: "RehabAI",
+    appName: "Rehavila",
     tagline: "AI-Guided Physiotherapy & Posture Tracking",
     signIn: "Sign in",
     signOut: "Sign out",
@@ -129,7 +129,7 @@ const TRANSLATIONS: Record<Language, Translations> = {
     savingSession: "Saving Session…",
     formScore: "Exercise Form Score",
     disclaimer:
-      "RehabAI provides movement feedback for general fitness and rehab support. It is not a substitute for professional medical advice, diagnosis or treatment.",
+      "Rehavila provides movement feedback for general fitness and rehab support. It is not a substitute for professional medical advice, diagnosis or treatment.",
     backToLibrary: "Back to Exercise Library",
     demoHeader: "A. Exercise Demonstration & Movement Steps",
     howToPerform: "B. How to Perform Step-by-Step",
@@ -156,7 +156,7 @@ const TRANSLATIONS: Record<Language, Translations> = {
     holdSeconds: "s hold",
   },
   hi: {
-    appName: "RehabAI",
+    appName: "Rehavila",
     tagline: "AI-संचालित फिजियोथेरेपी और मुद्रा ट्रैकिंग",
     signIn: "साइन इन करें",
     signOut: "साइन आउट",
@@ -205,7 +205,7 @@ const TRANSLATIONS: Record<Language, Translations> = {
     savingSession: "सत्र सहेजा जा रहा है…",
     formScore: "व्यायाम फॉर्म स्कोर",
     disclaimer:
-      "RehabAI फिटनेस और पुनर्वास सहायता के लिए मूवमेंट फीडबैक प्रदान करता है। यह पेशेवर चिकित्सा सलाह का विकल्प नहीं है।",
+      "Rehavila फिटनेस और पुनर्वास सहायता के लिए मूवमेंट फीडबैक प्रदान करता है। यह पेशेवर चिकित्सा सलाह का विकल्प नहीं है।",
     backToLibrary: "व्यायाम पुस्तकालय पर वापस जाएं",
     demoHeader: "अ. व्यायाम प्रदर्शन और चरण",
     howToPerform: "ब. चरण-दर-चरण व्यायाम कैसे करें",

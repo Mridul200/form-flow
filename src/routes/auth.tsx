@@ -12,13 +12,13 @@ import { BrandMark, MedicalDisclaimer } from "@/components/layout";
 export const Route = createFileRoute("/auth")({
   head: () => ({
     meta: [
-      { title: "Sign in or create your RehabAI account" },
+      { title: "Sign in or create your Rehavila account" },
       {
         name: "description",
         content:
           "Log in as a patient or physiotherapist to run AI form checks, track progress and connect securely.",
       },
-      { property: "og:title", content: "Sign in to RehabAI" },
+      { property: "og:title", content: "Sign in to Rehavila" },
       {
         property: "og:description",
         content: "Patient and clinician access to AI-guided rehab sessions.",

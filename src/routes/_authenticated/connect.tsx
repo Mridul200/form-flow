@@ -16,13 +16,13 @@ import { getPaymentService } from "@/lib/payment";
 export const Route = createFileRoute("/_authenticated/connect")({
   head: () => ({
     meta: [
-      { title: "Connect with a doctor — RehabAI" },
+      { title: "Connect with a doctor — Rehavila" },
       {
         name: "description",
         content:
           "Share your condition and rehab history with a verified physiotherapist, then chat or video call once approved.",
       },
-      { property: "og:title", content: "Connect with a doctor — RehabAI" },
+      { property: "og:title", content: "Connect with a doctor — Rehavila" },
       { property: "og:description", content: "Get a human opinion on your rehab progress." },
     ],
   }),

@@ -11,13 +11,13 @@ import { Skeleton } from "@/components/ui/skeleton";
 export const Route = createFileRoute("/_authenticated/doctor")({
   head: () => ({
     meta: [
-      { title: "Doctor dashboard — RehabAI" },
+      { title: "Doctor dashboard — Rehavila" },
       {
         name: "description",
         content: "Review incoming patient requests and open chat or video with approved patients.",
       },
-      { property: "og:title", content: "Doctor dashboard — RehabAI" },
-      { property: "og:description", content: "Manage your RehabAI patients." },
+      { property: "og:title", content: "Doctor dashboard — Rehavila" },
+      { property: "og:description", content: "Manage your Rehavila patients." },
     ],
   }),
   component: DoctorDashboard,

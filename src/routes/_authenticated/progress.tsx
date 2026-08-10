@@ -26,12 +26,12 @@ function StatCard({ icon, label, value }: { icon: React.ReactNode; label: string
 export const Route = createFileRoute("/_authenticated/progress")({
   head: () => ({
     meta: [
-      { title: "Progress & history — RehabAI" },
+      { title: "Progress & history — Rehavila" },
       {
         name: "description",
         content: "Accuracy trend over time, full session timeline and your consistency streak.",
       },
-      { property: "og:title", content: "Progress & history — RehabAI" },
+      { property: "og:title", content: "Progress & history — Rehavila" },
       { property: "og:description", content: "See whether your rehab form is actually improving." },
     ],
   }),

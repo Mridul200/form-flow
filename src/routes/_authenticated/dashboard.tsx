@@ -47,7 +47,7 @@ import { computeStreak } from "@/lib/stats";
 export const Route = createFileRoute("/_authenticated/dashboard")({
   head: () => ({
     meta: [
-      { title: "Patient Dashboard — RehabAI" },
+      { title: "Patient Dashboard — Rehavila" },
       {
         name: "description",
         content: "Start an exercise session, view instructions and track your rehab progress.",
@@ -279,7 +279,7 @@ function Dashboard() {
               <span className="grid size-8 place-items-center rounded-xl bg-emerald-600 text-white">
                 <Activity className="size-4" strokeWidth={2.5} />
               </span>
-              <span className="text-lg font-bold">RehabAI</span>
+              <span className="text-lg font-bold">Rehavila</span>
             </Link>
           </div>
 
@@ -324,7 +324,7 @@ function Dashboard() {
                   <p className="text-[11px] text-slate-600 mt-0.5">
                     {isHi
                       ? "अपनी रिपोर्ट को अधिक सटीक बनाने के लिए अपनी ऊंचाई, वजन और बुनियादी विवरण जोड़ें।"
-                      : "Add a few basic details to personalize your RehabAI reports."}
+                       : "Add a few basic details to personalize your Rehavila reports."}
                   </p>
                 </div>
               </div>

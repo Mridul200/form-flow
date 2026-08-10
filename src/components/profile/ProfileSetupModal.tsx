@@ -140,8 +140,8 @@ export function ProfileSetupModal({
           </h2>
           <p className="text-xs text-slate-500 max-w-sm mx-auto leading-relaxed">
             {isHi
-              ? "अपने RehabAI अनुभव को निजीकृत करने के लिए कुछ बुनियादी विवरण जोड़ें। इसमें केवल एक मिनट लगता है।"
-              : "Add a few basic details to personalize your RehabAI experience. It only takes a minute."}
+               ? "अपने Rehavila अनुभव को निजीकृत करने के लिए कुछ बुनियादी विवरण जोड़ें। इसमें केवल एक मिनट लगता है।"
+               : "Add a few basic details to personalize your Rehavila experience. It only takes a minute."}
           </p>
         </div>
 

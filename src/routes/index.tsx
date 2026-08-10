@@ -22,7 +22,7 @@ import { useLanguage } from "@/context/LanguageContext";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "RehabAI — AI-Powered Physiotherapy & Posture Tracking" },
+      { title: "Rehavila — AI-Powered Physiotherapy & Posture Tracking" },
       {
         name: "description",
         content:
@@ -270,8 +270,8 @@ function Landing() {
               </h2>
               <p className="text-sm text-slate-400">
                 {isHi
-                  ? "RehabAI आपके वेबकैम को एक बुद्धिमान फिजियोथेरेपी सहायक में बदल देता है।"
-                  : "RehabAI turns your webcam into an intelligent physiotherapy assistant."}
+                   ? "Rehavila आपके वेबकैम को एक बुद्धिमान फिजियोथेरेपी सहायक में बदल देता है।"
+                   : "Rehavila turns your webcam into an intelligent physiotherapy assistant."}
               </p>
             </div>
 
@@ -324,7 +324,7 @@ function Landing() {
       {/* Footer */}
       <footer className="border-t border-slate-800 bg-[#05070a] py-8 text-center text-xs text-slate-500">
         <div className="mx-auto max-w-7xl px-4 space-y-2">
-          <p>© {new Date().getFullYear()} RehabAI. All posture processing stays 100% private on your device.</p>
+          <p>© {new Date().getFullYear()} Rehavila. All posture processing stays 100% private on your device.</p>
         </div>
       </footer>
     </div>

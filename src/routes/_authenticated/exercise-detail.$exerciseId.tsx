@@ -19,7 +19,7 @@ export const Route = createFileRoute("/_authenticated/exercise-detail/$exerciseI
     const config = getExerciseConfig(params.exerciseId);
     return {
       meta: [
-        { title: `${config?.name ?? "Exercise Instructions"} — RehabAI` },
+         { title: `${config?.name ?? "Exercise Instructions"} — Rehavila` },
         {
           name: "description",
           content: `Step-by-step instructions, correct form cues, and mistakes for ${config?.name}.`,

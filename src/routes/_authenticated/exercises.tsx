@@ -16,7 +16,7 @@ import { Input } from "@/components/ui/input";
 export const Route = createFileRoute("/_authenticated/exercises")({
   head: () => ({
     meta: [
-      { title: "Exercise Library — RehabAI" },
+      { title: "Exercise Library — Rehavila" },
       {
         name: "description",
         content: "Comprehensive library of 10 AI-guided physiotherapeutic exercises with pose tracking.",
