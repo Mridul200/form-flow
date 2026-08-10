@@ -4,9 +4,7 @@ import {
   BarChart3,
   MessageSquare,
   ShieldCheck,
-  Stethoscope,
   Timer,
-  Video,
   ScanLine,
   ArrowRight,
   Sparkles,
@@ -26,7 +24,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Real-time webcam posture analysis, accurate rep counting, progress tracking, and expert physiotherapist consultations.",
+          "Real-time webcam posture analysis, accurate rep counting, and progress tracking — all private on your device.",
       },
     ],
   }),
@@ -60,27 +58,6 @@ function Landing() {
         ? "सटीकता रुझान, सत्र इतिहास और स्ट्रिक ट्रैकर जो दिखाते हैं कि आप वास्तव में सुधार कर रहे हैं।"
         : "See trends, streaks and your improvement over time with detailed session analytics.",
     },
-    {
-      icon: Stethoscope,
-      title: isHi ? "डॉक्टर से जुड़ें" : "CONNECT WITH A DOCTOR",
-      body: isHi
-        ? "अपना सत्र इतिहास और स्थिति सत्यापित फिजियोथेरेपिस्ट के साथ साझा करें और विशेषज्ञ सलाह पाएं।"
-        : "Share sessions and get expert guidance from a licensed physiotherapist.",
-    },
-    {
-      icon: MessageSquare,
-      title: isHi ? "सुरक्षित चैट" : "SECURE CHAT",
-      body: isHi
-        ? "अपने डॉक्टर के साथ ऐप के भीतर सुरक्षित और निजी संदेश सेवा।"
-        : "Chat with your clinician inside the app with end-to-end encrypted messaging.",
-    },
-    {
-      icon: Video,
-      title: isHi ? "वीडियो परामर्श" : "ON-DEMAND VIDEO CALL",
-      body: isHi
-        ? "लाइव मूवमेंट जांच के लिए जब भी जरूरत हो अपने डॉक्टर के साथ प्राइवेट वीडियो कॉल करें।"
-        : "Book a private video consultation whenever you need a live look at your movement.",
-    },
   ];
 
   return (
@@ -93,7 +70,7 @@ function Landing() {
               <Activity className="size-5" strokeWidth={2.8} />
             </span>
             <span className="text-xl font-bold tracking-tight text-white font-display">
-              Rehab<span className="text-[#a3e635]">AI</span>
+              Rehavila
             </span>
           </Link>
 
@@ -104,10 +81,7 @@ function Landing() {
             <a href="#features" className="hover:text-[#a3e635] transition-colors">
               {isHi ? "यह कैसे काम करता है" : "How it works"}
             </a>
-            <a href="#features" className="hover:text-[#a3e635] transition-colors">
-              {isHi ? "डॉक्टरों के लिए" : "For Clinicians"}
-            </a>
-            <a href="#features" className="hover:text-[#a3e635] transition-colors">
+            <a href="#about" className="hover:text-[#a3e635] transition-colors">
               {isHi ? "हमारे बारे में" : "About"}
             </a>
           </nav>
@@ -160,8 +134,8 @@ function Landing() {
 
                 <p className="text-base text-slate-400 sm:text-lg leading-relaxed max-w-xl">
                   {isHi
-                    ? "AI आधारित फॉर्म जांच। सटीक रेप गिनती। विशेषज्ञ फिजियोथेरेपिस्ट — सब एक ही स्थान पर।"
-                    : "AI form check. Accurate rep counting. Expert physiotherapists — all in one place."}
+                    ? "AI आधारित फॉर्म जांच। सटीक रेप गिनती। व्यक्तिगत प्रगति ट्रैकिंग — सब एक ही स्थान पर।"
+                    : "AI form check. Accurate rep counting. Personal progress tracking — all in one place."}
                 </p>
 
                 {/* Hero CTAs */}
@@ -175,15 +149,6 @@ function Landing() {
                       {isHi ? "निःशुल्क सत्र शुरू करें" : "START A FREE SESSION"}
                       <ArrowRight className="size-4" />
                     </Link>
-                  </Button>
-
-                  <Button
-                    asChild
-                    size="lg"
-                    variant="outline"
-                    className="border-slate-700 bg-slate-900/80 text-white hover:bg-slate-800 text-sm px-6 h-12 rounded-full font-semibold"
-                  >
-                    <Link to="/auth">{isHi ? "मैं एक डॉक्टर हूँ" : "I'M A CLINICIAN"}</Link>
                   </Button>
                 </div>
 
@@ -265,8 +230,8 @@ function Landing() {
             <div className="text-center max-w-3xl mx-auto space-y-3">
               <h2 className="text-2xl font-bold tracking-tight text-white sm:text-4xl uppercase font-display">
                 {isHi
-                  ? "आपकी पहली रेप से लेकर असली डॉक्टर तक सब कुछ"
-                  : "EVERYTHING BETWEEN YOUR FIRST REP AND A REAL CLINICIAN"}
+                  ? "आपकी पहली रेप से लेकर सटीक प्रगति तक सब कुछ"
+                  : "EVERYTHING BETWEEN YOUR FIRST REP AND REAL PROGRESS"}
               </h2>
               <p className="text-sm text-slate-400">
                 {isHi
@@ -288,6 +253,88 @@ function Landing() {
                   <p className="text-xs text-slate-400 leading-relaxed">{f.body}</p>
                 </article>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* About Section */}
+        <section id="about" className="py-20 border-b border-slate-800/50 relative">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6">
+            <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+              <div className="space-y-6">
+                <h2 className="text-2xl font-bold tracking-tight text-white sm:text-4xl uppercase font-display">
+                  {isHi ? "हमारे बारे में" : "ABOUT REHAVILA"}
+                </h2>
+                <p className="text-sm text-slate-400 leading-relaxed">
+                  {isHi
+                    ? "Rehavila आधुनिक AI तकनीक और पुनर्वास विज्ञान को एक साथ लाता है ताकि हर किसी को सटीक, सुलभ और निजी मूवमेंट कोचिंग मिल सके। हमारा मिशन है कि गुणवत्तापूर्ण फिजियोथेरेपी सहायता सीमाओं से परे हो और हर घर तक पहुंच सके।"
+                    : "Rehavila combines modern AI with rehabilitation science to deliver accurate, accessible, and private movement coaching. Our mission is to make quality physiotherapy support available beyond clinic walls and reach every home."}
+                </p>
+                <p className="text-sm text-slate-400 leading-relaxed">
+                  {isHi
+                    ? "हमारा प्लेटफॉर्म वेबकैम-आधारित मूवमेंट विश्लेषण, रीयल-टाइम फीडबैक और बाद में आने वाले प्रगति ट्रैकिंग प्रदान करता है — सब कुछ ब्राउज़र में चलता है, बिना किसी अपलोड के।"
+                    : "Our platform delivers webcam-based movement analysis, real-time feedback, and progress tracking — all running in the browser with zero uploads, so your data never leaves your device."}
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                  <div className="rounded-xl border border-slate-800 bg-slate-900/60 p-4">
+                    <p className="text-xs font-semibold text-[#a3e635] uppercase tracking-wider mb-1">
+                      {isHi ? "गोपनीयता पहले" : "Privacy First"}
+                    </p>
+                    <p className="text-xs text-slate-400">
+                      {isHi
+                        ? "सभी विश्लेषण स्थानीय रूप से होता है। कोई फ्रेम अपलोड नहीं होता।"
+                        : "All analysis happens locally. No frames ever leave your device."}
+                    </p>
+                  </div>
+                  <div className="rounded-xl border border-slate-800 bg-slate-900/60 p-4">
+                    <p className="text-xs font-semibold text-[#a3e635] uppercase tracking-wider mb-1">
+                      {isHi ? "सटीकता" : "Accuracy"}
+                    </p>
+                    <p className="text-xs text-slate-400">
+                      {isHi
+                        ? "33 जोड़ों को ट्रैक करने और वास्तविक समय में कोचिंग लक्ष्यों को पूरा करने के लिए डिज़ाइन किया गया।"
+                        : "Designed to track 33 joints and meet real-time coaching benchmarks."}
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="relative rounded-2xl border border-slate-800 bg-slate-900/90 p-6 shadow-2xl">
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <span className="grid size-10 place-items-center rounded-xl bg-[#a3e635]/10 text-[#a3e635]">
+                      <ShieldCheck className="size-5" />
+                    </span>
+                    <div>
+                      <p className="text-sm font-bold text-white">On-device processing</p>
+                      <p className="text-xs text-slate-400">
+                        {isHi ? "आपका वीडियो कभी सर्वर पर नहीं जाता" : "Your video never goes to a server"}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="grid size-10 place-items-center rounded-xl bg-[#a3e635]/10 text-[#a3e635]">
+                      <Sparkles className="size-5" />
+                    </span>
+                    <div>
+                      <p className="text-sm font-bold text-white">AI-powered feedback</p>
+                      <p className="text-xs text-slate-400">
+                        {isHi ? "हर फ्रेम पर सटीक मूवमेंट गाइडेंस" : "Precise movement guidance on every frame"}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="grid size-10 place-items-center rounded-xl bg-[#a3e635]/10 text-[#a3e635]">
+                      <BarChart3 className="size-5" />
+                    </span>
+                    <div>
+                      <p className="text-sm font-bold text-white">Progress tracking</p>
+                      <p className="text-xs text-slate-400">
+                        {isHi ? "सटीकता रुझान और सत्र इतिहास देखें" : "See accuracy trends and session history"}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
