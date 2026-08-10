@@ -105,7 +105,7 @@ function Landing() {
               {isHi ? "यह कैसे काम करता है" : "How it works"}
             </a>
             <a href="#features" className="hover:text-[#a3e635] transition-colors">
-              {isHi ? "डॉक्टरों के लिए" : "For Doctors"}
+              {isHi ? "डॉक्टर" : "Doctor"}
             </a>
             <a href="#about" className="hover:text-[#a3e635] transition-colors">
               {isHi ? "हमारे बारे में" : "About"}
