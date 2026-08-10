@@ -60,6 +60,9 @@ function Landing() {
         ? "सटीकता रुझान, सत्र इतिहास और स्ट्रिक ट्रैकर जो दिखाते हैं कि आप वास्तव में सुधार कर रहे हैं।"
         : "See trends, streaks and your improvement over time with detailed session analytics.",
     },
+  ];
+
+  const doctorFeatures = [
     {
       icon: Stethoscope,
       title: isHi ? "डॉक्टर से जुड़ें" : "CONNECT WITH A DOCTOR",
@@ -104,7 +107,7 @@ function Landing() {
             <a href="#features" className="hover:text-[#a3e635] transition-colors">
               {isHi ? "यह कैसे काम करता है" : "How it works"}
             </a>
-            <a href="#features" className="hover:text-[#a3e635] transition-colors">
+            <a href="#doctor" className="hover:text-[#a3e635] transition-colors">
               {isHi ? "डॉक्टर" : "Doctor"}
             </a>
             <a href="#about" className="hover:text-[#a3e635] transition-colors">
@@ -294,18 +297,49 @@ function Landing() {
             <div className="text-center max-w-3xl mx-auto space-y-3">
               <h2 className="text-2xl font-bold tracking-tight text-white sm:text-4xl uppercase font-display">
                 {isHi
-                  ? "आपकी पहली रेप से लेकर असली डॉक्टर तक सब कुछ"
-                  : "EVERYTHING BETWEEN YOUR FIRST REP AND A REAL CLINICIAN"}
+                  ? "आपकी पहली रेप से लेकर सटीक प्रगति तक सब कुछ"
+                  : "EVERYTHING BETWEEN YOUR FIRST REP AND REAL PROGRESS"}
               </h2>
               <p className="text-sm text-slate-400">
                 {isHi
-                   ? "Rehavila आपके वेबकैम को एक बुद्धिमान फिजियोथेरेपी सहायक में बदल देता है।"
-                   : "Rehavila turns your webcam into an intelligent physiotherapy assistant."}
+                  ? "Rehavila आपके वेबकैम को एक बुद्धिमान फिजियोथेरेपी सहायक में बदल देता है।"
+                  : "Rehavila turns your webcam into an intelligent physiotherapy assistant."}
               </p>
             </div>
 
             <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {features.map((f) => (
+                <article
+                  key={f.title}
+                  className="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 transition-all hover:border-[#a3e635]/40 hover:bg-slate-900 group space-y-4"
+                >
+                  <span className="grid size-12 place-items-center rounded-xl bg-slate-800 text-[#a3e635] group-hover:bg-[#a3e635] group-hover:text-black transition-colors">
+                    <f.icon className="size-6" />
+                  </span>
+                  <h3 className="text-base font-bold text-white tracking-wide">{f.title}</h3>
+                  <p className="text-xs text-slate-400 leading-relaxed">{f.body}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Doctor Section */}
+        <section id="doctor" className="py-20 border-b border-slate-800/50 relative">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6">
+            <div className="text-center max-w-3xl mx-auto space-y-3">
+              <h2 className="text-2xl font-bold tracking-tight text-white sm:text-4xl uppercase font-display">
+                {isHi ? "डॉक्टर से जुड़ें" : "CONNECT WITH A DOCTOR"}
+              </h2>
+              <p className="text-sm text-slate-400">
+                {isHi
+                  ? "अपने सत्र इतिहास और स्थिति सत्यापित फिजियोथेरेपिस्ट के साथ साझा करें और विशेषज्ञ सलाह पाएं।"
+                  : "Share sessions and get expert guidance from a licensed physiotherapist."}
+              </p>
+            </div>
+
+            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {doctorFeatures.map((f) => (
                 <article
                   key={f.title}
                   className="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 transition-all hover:border-[#a3e635]/40 hover:bg-slate-900 group space-y-4"
