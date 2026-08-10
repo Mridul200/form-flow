@@ -4,6 +4,7 @@ import {
   BarChart3,
   MessageSquare,
   ShieldCheck,
+  Stethoscope,
   Timer,
   ScanLine,
   ArrowRight,
@@ -24,7 +25,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Real-time webcam posture analysis, accurate rep counting, and progress tracking — all private on your device.",
+          "Real-time webcam posture analysis, accurate rep counting, progress tracking, and expert physiotherapist consultations.",
       },
     ],
   }),
@@ -32,7 +33,7 @@ export const Route = createFileRoute("/")({
 });
 
 function Landing() {
-  const { language } = useLanguage();
+  const { language, t } = useLanguage();
 
   const isHi = language === "hi";
 
@@ -58,6 +59,27 @@ function Landing() {
         ? "सटीकता रुझान, सत्र इतिहास और स्ट्रिक ट्रैकर जो दिखाते हैं कि आप वास्तव में सुधार कर रहे हैं।"
         : "See trends, streaks and your improvement over time with detailed session analytics.",
     },
+    {
+      icon: Stethoscope,
+      title: isHi ? "डॉक्टर से जुड़ें" : "CONNECT WITH A DOCTOR",
+      body: isHi
+        ? "अपना सत्र इतिहास और स्थिति सत्यापित फिजियोथेरेपिस्ट के साथ साझा करें और विशेषज्ञ सलाह पाएं।"
+        : "Share sessions and get expert guidance from a licensed physiotherapist.",
+    },
+    {
+      icon: MessageSquare,
+      title: isHi ? "सुरक्षित चैट" : "SECURE CHAT",
+      body: isHi
+        ? "अपने डॉक्टर के साथ ऐप के भीतर सुरक्षित और निजी संदेश सेवा।"
+        : "Chat with your clinician inside the app with end-to-end encrypted messaging.",
+    },
+    {
+      icon: Video,
+      title: isHi ? "वीडियो परामर्श" : "ON-DEMAND VIDEO CALL",
+      body: isHi
+        ? "लाइव मूवमेंट जांच के लिए जब भी जरूरत हो अपने डॉक्टर के साथ प्राइवेट वीडियो कॉल करें।"
+        : "Book a private video consultation whenever you need a live look at your movement.",
+    },
   ];
 
   return (
@@ -80,6 +102,9 @@ function Landing() {
             </a>
             <a href="#features" className="hover:text-[#a3e635] transition-colors">
               {isHi ? "यह कैसे काम करता है" : "How it works"}
+            </a>
+            <a href="#features" className="hover:text-[#a3e635] transition-colors">
+              {isHi ? "डॉक्टरों के लिए" : "For Doctors"}
             </a>
             <a href="#about" className="hover:text-[#a3e635] transition-colors">
               {isHi ? "हमारे बारे में" : "About"}
@@ -134,8 +159,8 @@ function Landing() {
 
                 <p className="text-base text-slate-400 sm:text-lg leading-relaxed max-w-xl">
                   {isHi
-                    ? "AI आधारित फॉर्म जांच। सटीक रेप गिनती। व्यक्तिगत प्रगति ट्रैकिंग — सब एक ही स्थान पर।"
-                    : "AI form check. Accurate rep counting. Personal progress tracking — all in one place."}
+                    ? "AI आधारित फॉर्म जांच। सटीक रेप गिनती। विशेषज्ञ फिजियोथेरेपिस्ट — सब एक ही स्थान पर।"
+                    : "AI form check. Accurate rep counting. Expert physiotherapists — all in one place."}
                 </p>
 
                 {/* Hero CTAs */}
@@ -224,14 +249,52 @@ function Landing() {
           </div>
         </section>
 
+        {/* Exercises Section */}
+        <section id="exercises" className="py-20 border-b border-slate-800/50 relative">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6">
+            <div className="text-center max-w-3xl mx-auto space-y-3">
+              <h2 className="text-2xl font-bold tracking-tight text-white sm:text-4xl uppercase font-display">
+                {t.exercisesSectionTitle}
+              </h2>
+              <p className="text-sm text-slate-400">
+                {t.exercisesSectionDesc}
+              </p>
+            </div>
+
+            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                { key: "all", label: t.all, icon: Activity },
+                { key: "ankle", label: t.ankle, icon: Activity },
+                { key: "knee", label: t.knee, icon: Activity },
+                { key: "hip", label: t.hip, icon: Activity },
+                { key: "balance", label: t.balance, icon: Activity },
+              ].map((cat) => (
+                <Link
+                  key={cat.key}
+                  to="/auth"
+                  className="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 transition-all hover:border-[#a3e635]/40 hover:bg-slate-900 group space-y-4 text-center"
+                >
+                  <span className="grid size-12 place-items-center rounded-xl bg-slate-800 text-[#a3e635] group-hover:bg-[#a3e635] group-hover:text-black transition-colors mx-auto">
+                    <cat.icon className="size-6" />
+                  </span>
+                  <h3 className="text-base font-bold text-white tracking-wide">{cat.label}</h3>
+                  <p className="text-xs text-[#a3e635] font-semibold group-hover:underline">
+                    {isHi ? "शुरू करें" : "Start"} →
+                  </p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Features Section */}
         <section id="features" className="py-20 border-b border-slate-800/50 relative">
           <div className="mx-auto max-w-7xl px-4 sm:px-6">
             <div className="text-center max-w-3xl mx-auto space-y-3">
               <h2 className="text-2xl font-bold tracking-tight text-white sm:text-4xl uppercase font-display">
                 {isHi
-                  ? "आपकी पहली रेप से लेकर सटीक प्रगति तक सब कुछ"
-                  : "EVERYTHING BETWEEN YOUR FIRST REP AND REAL PROGRESS"}
+                  ? "आपकी पहली रेप से लेकर असली डॉक्टर तक सब कुछ"
+                  : "EVERYTHING BETWEEN YOUR FIRST REP AND A REAL CLINICIAN"}
               </h2>
               <p className="text-sm text-slate-400">
                 {isHi
@@ -371,7 +434,7 @@ function Landing() {
       {/* Footer */}
       <footer className="border-t border-slate-800 bg-[#05070a] py-8 text-center text-xs text-slate-500">
         <div className="mx-auto max-w-7xl px-4 space-y-2">
-          <p>© {new Date().getFullYear()} Rehavila. All posture processing stays 100% private on your device.</p>
+          <p>© {new Date().getFullYear()} Rehavila. {t.footerPrivacy}</p>
         </div>
       </footer>
     </div>

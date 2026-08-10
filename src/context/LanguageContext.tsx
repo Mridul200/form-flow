@@ -76,6 +76,9 @@ export interface Translations {
   noMatchSearch: string;
   tryAdjustFilters: string;
   holdSeconds: string;
+  footerPrivacy: string;
+  exercisesSectionTitle: string;
+  exercisesSectionDesc: string;
 }
 
 const TRANSLATIONS: Record<Language, Translations> = {
@@ -154,6 +157,9 @@ const TRANSLATIONS: Record<Language, Translations> = {
     noMatchSearch: "No exercises match your search",
     tryAdjustFilters: "Try adjusting your filters or search keywords.",
     holdSeconds: "s hold",
+    footerPrivacy: "All posture processing stays 100% private on your device.",
+    exercisesSectionTitle: "EXERCISE LIBRARY",
+    exercisesSectionDesc: "Start with these AI-guided physiotherapy exercises. More coming soon.",
   },
   hi: {
     appName: "Rehavila",
@@ -230,6 +236,9 @@ const TRANSLATIONS: Record<Language, Translations> = {
     noMatchSearch: "आपकी खोज से मेल खाता कोई व्यायाम नहीं मिला",
     tryAdjustFilters: "कृपया फ़िल्टर या खोज शब्द बदलकर प्रयास करें।",
     holdSeconds: "सेकंड रोकें",
+    footerPrivacy: "सभी मुद्रा प्रोसेसिंग 100% आपके डिवाइस पर निजी रहती है।",
+    exercisesSectionTitle: "व्यायाम पुस्तकालय",
+    exercisesSectionDesc: "इन AI-संचालित फिजियोथेरेपी व्यायामों से शुरुआत करें। जल्द ही और व्यायाम जोड़ें।",
   },
 };
 
